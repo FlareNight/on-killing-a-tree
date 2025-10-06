@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>On Killing a Tree - Interactive Poetry Book</title>
+    <!-- Google Fonts for Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Dancing+Script:wght@400;500;600;700&family=Great+Vibes&family=Satisfy&family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loading-content">
+            <div class="tree-animation">🌳</div>
+            <h2>Loading Poetry...</h2>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Progress Indicator -->
+    <div class="progress-indicator">
+        <div class="progress-dots">
+            <div class="dot active" data-page="0" tabindex="0"></div>
+            <div class="dot" data-page="1" tabindex="0"></div>
+            <div class="dot" data-page="2" tabindex="0"></div>
+            <div class="dot" data-page="3" tabindex="0"></div>
+            <div class="dot" data-page="4" tabindex="0"></div>
+            <div class="dot" data-page="5" tabindex="0"></div>
+        </div>
+    </div>
+
+    <!-- Main Container -->
+    <div class="book-container">
+        <!-- Title Page -->
+        <div class="page active" id="page-0">
+            <div class="page-content title-page">
+                <div class="title-decoration">🍃</div>
+                <h1 class="book-title">On Killing a Tree</h1>
+                <p class="author">by Gieve Patel</p>
+                <div class="title-description">
+                    <p>An interactive exploration of nature's resilience and environmental consciousness</p>
+                </div>
+                <div class="start-btn-container">
+                    <button class="start-btn" id="begin-reading-btn" onclick="nextPage()">Begin Reading</button>
+                </div>
+                <div class="attribution">Made By Subhash & Nishanth</div>
+            </div>
+        </div>
+
+        <!-- Stanza 1 -->
+        <div class="page" id="page-1">
+            <div class="page-content">
+                <div class="stanza-header">
+                    <h2>Stanza I</h2>
+                    <div class="leaf-decoration">🌿</div>
+                </div>
+                <div class="poem-text">
+                    <div class="line hover-line">It takes much time to kill a tree,</div>
+                    <div class="line hover-line">Not a simple jab of the knife</div>
+                    <div class="line hover-line">Will do it. It has grown</div>
+                    <div class="line hover-line">Slowly consuming the earth,</div>
+                    <div class="line hover-line">Rising out of it, feeding</div>
+                    <div class="line hover-line">Upon its crust, absorbing</div>
+                    <div class="line hover-line">Years of sunlight, air, water,</div>
+                    <div class="line hover-line">And out of its <span class="key-term" data-tooltip="The rough, diseased-looking bark of the tree">leprous hide</span></div>
+                    <div class="line hover-line">Sprouting leaves.</div>
+                </div>
+                <div class="theme-note">
+                    <p><em>The poet emphasizes the tree's deep connection with earth and time...</em></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Stanza 2 -->
+        <div class="page" id="page-2">
+            <div class="page-content">
+                <div class="stanza-header">
+                    <h2>Stanza II</h2>
+                    <div class="leaf-decoration">🌱</div>
+                </div>
+                <div class="poem-text">
+                    <div class="line hover-line">So hack and chop</div>
+                    <div class="line hover-line">But this alone won't do it.</div>
+                    <div class="line hover-line">Not so much pain will do it.</div>
+                    <div class="line hover-line">The <span class="key-term" data-tooltip="The wounded bark that oozes sap when cut">bleeding bark</span> will heal</div>
+                    <div class="line hover-line">And from close to the ground</div>
+                    <div class="line hover-line">Will rise curled green twigs,</div>
+                    <div class="line hover-line">Miniature boughs</div>
+                    <div class="line hover-line">Which if unchecked will expand again</div>
+                    <div class="line hover-line">To former size.</div>
+                </div>
+                <div class="theme-note">
+                    <p><em>Nature's incredible power of regeneration and healing...</em></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Stanza 3 -->
+        <div class="page" id="page-3">
+            <div class="page-content">
+                <div class="stanza-header">
+                    <h2>Stanza III</h2>
+                    <div class="leaf-decoration">🌳</div>
+                </div>
+                <div class="poem-text">
+                    <div class="line hover-line">No,</div>
+                    <div class="line hover-line">The root is to be pulled out -</div>
+                    <div class="line hover-line">Out of the <span class="key-term" data-tooltip="The soil that firmly holds the tree's roots">anchoring earth</span>;</div>
+                    <div class="line hover-line">It is to be roped, tied,</div>
+                    <div class="line hover-line">And pulled out - snapped out</div>
+                    <div class="line hover-line">Or pulled out entirely,</div>
+                    <div class="line hover-line">Out from the <span class="key-term" data-tooltip="The underground space where roots are hidden">earth-cave</span>,</div>
+                    <div class="line hover-line">And the strength of the tree exposed,</div>
+                    <div class="line hover-line">The <span class="key-term" data-tooltip="The root system - the tree's life source">source</span>, white and wet,</div>
+                    <div class="line hover-line">The most sensitive, hidden</div>
+                    <div class="line hover-line">For years inside the earth.</div>
+                </div>
+                <div class="theme-note">
+                    <p><em>The violent uprooting reveals the tree's vulnerable core...</em></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Stanza 4 -->
+        <div class="page" id="page-4">
+            <div class="page-content">
+                <div class="stanza-header">
+                    <h2>Stanza IV</h2>
+                    <div class="leaf-decoration">🍂</div>
+                </div>
+                <div class="poem-text">
+                    <div class="line hover-line">Then the matter</div>
+                    <div class="line hover-line">Of scorching and choking</div>
+                    <div class="line hover-line">In sun and air,</div>
+                    <div class="line hover-line">Browning, hardening,</div>
+                    <div class="line hover-line">Twisting, withering,</div>
+                    <div class="line hover-line">And then it is done.</div>
+                </div>
+                <div class="theme-note">
+                    <p><em>The final, inevitable death after complete disconnection from earth...</em></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Final Page -->
+        <div class="page" id="page-5">
+            <div class="page-content final-page">
+                <div class="final-decoration">🌿🌳🍃</div>
+                <h2>Reflection</h2>
+                <div class="reflection-text">
+                    <p>Gieve Patel's "On Killing a Tree" is a powerful metaphor for the resilience of nature and the violence required to truly destroy it. The poem serves as both a literal instruction manual and a profound statement about environmental destruction.</p>
+                    <br>
+                    <p>Through vivid imagery and methodical progression, the poet reveals the deep, almost spiritual connection between trees and earth, making us question our relationship with nature.</p>
+                </div>
+                <div class="attribution-final">
+                    <h3>Made By Subhash & Nishanth</h3>
+                    <p>Interactive Poetry Experience</p>
+                </div>
+                <button class="restart-btn" onclick="goToPage(0)">Start Over</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Buttons -->
+    <div class="nav-buttons">
+        <button class="nav-btn prev-btn" onclick="prevPage()" id="prevBtn" aria-label="Previous page">
+            <span>‹</span>
+        </button>
+        <button class="nav-btn next-btn" onclick="nextPage()" id="nextBtn" aria-label="Next page">
+            <span>›</span>
+        </button>
+    </div>
+
+    <!-- Tooltip -->
+    <div id="tooltip" class="tooltip hidden"></div>
+
+    <!-- Enhanced Falling Leaves Container -->
+    <div class="falling-leaves" id="falling-leaves"></div>
+
+    <script src="app.js"></script>
+</body>
+</html>
